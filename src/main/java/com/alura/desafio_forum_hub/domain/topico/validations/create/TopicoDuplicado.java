@@ -18,7 +18,6 @@ public class TopicoDuplicado implements ValidarTopicoCriado {
         var topicoDuplicado = topicoRepository.existsByTituloAndMensagem(dados.titulo(), dados.mensagem());
         if(topicoDuplicado){
             throw new ValidationException("Este tópico já existe. Verifique em /topicos/" + topicoRepository.findByTitulo(dados.titulo()).getId());
-
         }
     }
 }

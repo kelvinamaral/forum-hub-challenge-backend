@@ -36,7 +36,7 @@ public class Usuario implements UserDetails{
     private String nome;
     private String sobrenome;
     private String email;
-    private Boolean enabled;
+    private Boolean ativo;
 
     public Usuario(CriarUsuarioDTO criarUsuarioDTO, String hashedPassword) {
         this.username = criarUsuarioDTO.username();
@@ -45,7 +45,7 @@ public class Usuario implements UserDetails{
         this.nome = capitalizado(criarUsuarioDTO.nome());
         this.sobrenome = capitalizado(criarUsuarioDTO.sobrenome());
         this.email = criarUsuarioDTO.email();
-        this.enabled = true;
+        this.ativo = true;
     }
 
     public void atualizarUsuarioComPassword(AtualizarUsuarioDTO atualizarUsuarioDTO, String hashedPassword) {
@@ -65,7 +65,7 @@ public class Usuario implements UserDetails{
             this.email = atualizarUsuarioDTO.email();
         }
         if (atualizarUsuarioDTO.enabled() != null){
-            this.enabled = atualizarUsuarioDTO.enabled();
+            this.ativo = atualizarUsuarioDTO.enabled();
         }
     }
 
@@ -84,12 +84,12 @@ public class Usuario implements UserDetails{
             this.email = atualizarUsuarioDTO.email();
         }
         if (atualizarUsuarioDTO.enabled() != null){
-            this.enabled = atualizarUsuarioDTO.enabled();
+            this.ativo = atualizarUsuarioDTO.enabled();
         }
     }
 
     public void eliminarUsuario(){
-        this.enabled = false;
+        this.ativo = false;
     }
 
     private String capitalizado(String string) {
@@ -118,6 +118,6 @@ public class Usuario implements UserDetails{
 
     @Override
     public boolean isEnabled() {
-        return enabled;
+        return ativo;
     }
 }

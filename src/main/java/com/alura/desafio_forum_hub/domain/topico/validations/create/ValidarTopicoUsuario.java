@@ -19,7 +19,7 @@ public class ValidarTopicoUsuario implements ValidarTopicoCriado {
             throw new ValidationException("Este usuário não existe.");
         }
 
-        var usuarioHabilitado = repository.findById(dados.usuarioId()).get().getEnabled();
+        var usuarioHabilitado = repository.findById(dados.usuarioId()).get().getAtivo();
         if (!usuarioHabilitado) {
             throw new ValidationException("Este usuário foi desabilitado.");
         }

@@ -15,8 +15,8 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "curso")
-@Entity(name = "Curso")
+@Table(name = "respostas")
+@Entity(name = "Resposta")
 @EqualsAndHashCode(of = "id")
 public class Resposta {
 

@@ -20,7 +20,7 @@ public record DetalhesUsuarioDTO(
                 usuario.getNome(),
                 usuario.getSobrenome(),
                 usuario.getEmail(),
-                usuario.getEnabled()
+                usuario.getAtivo()
         );
     }
 }

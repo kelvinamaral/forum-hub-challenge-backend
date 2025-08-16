@@ -81,14 +81,14 @@ public class UsuarioController {
                 usuario.getNome(),
                 usuario.getSobrenome(),
                 usuario.getEmail(),
-                usuario.getEnabled()
+                usuario.getAtivo()
         );
         return ResponseEntity.ok(dadosUsuario);
     }
 
     @GetMapping("/id/{id}")
     @Operation(summary = "Lê um único usuário por seu ID")
-    public ResponseEntity<DetalhesUsuarioDTO> lerUmUsuario(@PathVariable Long id) {
+    public ResponseEntity<DetalhesUsuarioDTO> lerUmUsuarioPorId(@PathVariable Long id) {
         Usuario usuario = repository.getReferenceById(id);
         var dadosUsuario = new DetalhesUsuarioDTO(
                 usuario.getId(),
@@ -97,7 +97,7 @@ public class UsuarioController {
                 usuario.getNome(),
                 usuario.getSobrenome(),
                 usuario.getEmail(),
-                usuario.getEnabled()
+                usuario.getAtivo()
         );
         return ResponseEntity.ok(dadosUsuario);
     }
@@ -125,7 +125,7 @@ public class UsuarioController {
                 usuario.getNome(),
                 usuario.getSobrenome(),
                 usuario.getEmail(),
-                usuario.getEnabled()
+                usuario.getAtivo()
         );
         return ResponseEntity.ok(dadosUsuario);
     }

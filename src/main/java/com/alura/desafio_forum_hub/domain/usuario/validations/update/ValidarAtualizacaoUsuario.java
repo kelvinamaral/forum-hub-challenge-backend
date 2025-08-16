@@ -2,11 +2,12 @@ package com.alura.desafio_forum_hub.domain.usuario.validations.update;
 
 import com.alura.desafio_forum_hub.domain.usuario.dto.AtualizarUsuarioDTO;
 import com.alura.desafio_forum_hub.domain.usuario.repository.UsuarioRepository;
-import com.alura.desafio_forum_hub.domain.usuario.validations.create.ValidarCriarUsuario;
 import jakarta.validation.ValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-public class ValidarAtualizacaoUsuario implements ValidarCriarUsuario {
+@Component
+public class ValidarAtualizacaoUsuario implements ValidarAtualizarUsuario  {
 
     @Autowired
     private UsuarioRepository repository;

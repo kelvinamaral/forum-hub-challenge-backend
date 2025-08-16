@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "curso")
+@Table(name = "cursos")
 @Entity(name = "Curso")
 @EqualsAndHashCode(of = "id")
 public class Curso {
