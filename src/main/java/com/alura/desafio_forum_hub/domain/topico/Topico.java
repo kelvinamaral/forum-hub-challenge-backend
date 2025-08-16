@@ -3,6 +3,7 @@ package com.alura.desafio_forum_hub.domain.topico;
 import com.alura.desafio_forum_hub.domain.curso.Curso;
 import com.alura.desafio_forum_hub.domain.topico.dto.AtualizarTopicoDTO;
 import com.alura.desafio_forum_hub.domain.topico.dto.CriarTopicoDTO;
+import com.alura.desafio_forum_hub.domain.usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

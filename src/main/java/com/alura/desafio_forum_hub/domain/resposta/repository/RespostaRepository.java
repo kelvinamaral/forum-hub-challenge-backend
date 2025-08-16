@@ -13,9 +13,8 @@ public interface RespostaRepository extends JpaRepository<Resposta, Long> {
 
     Page<Resposta> findAllByUsuarioId(Long usuarioId, Pageable pageable);
 
-    Resposta getReferenceByTopicoId(Long id);
+    Resposta getReferenceByTopicoIdAndSolucionTrue(Long id);
 
     @SuppressWarnings("null")
     Resposta getReferenceById(Long id);
-
 }

@@ -25,7 +25,7 @@ public record DetalhesTopicoDTO(
                 topico.getUltimaAtualizacao(),
                 topico.getEstado(),
                 topico.getUsuario().getUsername(),
-                topico.getCurso().getNome(), // Use getNome() para o nome do curso
+                topico.getCurso().getNome(),
                 topico.getCurso().getCategoria()
         );
     }

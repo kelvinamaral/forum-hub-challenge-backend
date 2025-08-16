@@ -4,7 +4,7 @@ import com.alura.desafio_forum_hub.domain.resposta.Resposta;
 
 import java.time.LocalDateTime;
 
-public record DetalharRespostaDTO(
+public record DetalhesRespostaDTO(
         Long id,
         String mensagem,
         LocalDateTime dataCriacao,
@@ -17,7 +17,7 @@ public record DetalharRespostaDTO(
         String topico
 ) {
 
-    public DetalharRespostaDTO(Resposta resposta){
+    public DetalhesRespostaDTO(Resposta resposta){
         this(
                 resposta.getId(),
                 resposta.getMensagem(),
