@@ -8,6 +8,6 @@ public record AtualizarUsuarioDTO(
         String nome,
         String sobrenome,
         String email,
-        Boolean enabled
+        Boolean ativo
 ) {
 }

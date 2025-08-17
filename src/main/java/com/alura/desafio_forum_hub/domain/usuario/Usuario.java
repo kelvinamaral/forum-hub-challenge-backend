@@ -64,8 +64,8 @@ public class Usuario implements UserDetails{
         if (atualizarUsuarioDTO.email() != null){
             this.email = atualizarUsuarioDTO.email();
         }
-        if (atualizarUsuarioDTO.enabled() != null){
-            this.ativo = atualizarUsuarioDTO.enabled();
+        if (atualizarUsuarioDTO.ativo() != null){
+            this.ativo = atualizarUsuarioDTO.ativo();
         }
     }
 
@@ -83,8 +83,8 @@ public class Usuario implements UserDetails{
         if (atualizarUsuarioDTO.email() != null){
             this.email = atualizarUsuarioDTO.email();
         }
-        if (atualizarUsuarioDTO.enabled() != null){
-            this.ativo = atualizarUsuarioDTO.enabled();
+        if (atualizarUsuarioDTO.ativo() != null){
+            this.ativo = atualizarUsuarioDTO.ativo();
         }
     }
 
